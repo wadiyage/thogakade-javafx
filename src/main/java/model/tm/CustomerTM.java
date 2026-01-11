@@ -2,7 +2,7 @@ package model.tm;
 
 import lombok.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,7 +15,7 @@ public class CustomerTM {
     private String name;
     private String address;
     private Double salary;
-    private Date dob;
+    private LocalDate dob;
     private String city;
     private String province;
     private String postalCode;
