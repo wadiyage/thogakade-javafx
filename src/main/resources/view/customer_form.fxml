@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="616.0" prefWidth="892.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2ecc71" height="120.0" stroke="BLACK" strokeType="INSIDE" width="892.0" />
+      <Label layoutX="272.0" layoutY="31.0" text="Customer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtId" layoutX="23.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="id" unFocusColor="BLACK" />
+      <DatePicker fx:id="dateDob" layoutX="669.0" layoutY="165.0" prefHeight="26.0" prefWidth="200.0" />
+      <JFXTextField fx:id="txtTitle" layoutX="239.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="title" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtName" layoutX="455.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="name" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtSalary" layoutX="23.0" layoutY="229.0" prefHeight="26.0" prefWidth="200.0" promptText="salary" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtAddress" layoutX="239.0" layoutY="229.0" prefHeight="26.0" prefWidth="200.0" promptText="address" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtCity" layoutX="455.0" layoutY="229.0" prefHeight="26.0" prefWidth="200.0" promptText="city" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtProvince" layoutX="669.0" layoutY="229.0" prefHeight="26.0" prefWidth="200.0" promptText="province" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtPostalCode" layoutX="23.0" layoutY="281.0" prefHeight="26.0" prefWidth="200.0" promptText="postal code" unFocusColor="BLACK" />
+      <JFXButton layoutX="669.0" layoutY="291.0" onAction="#btnAddCustomerOnAction" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #8e44ad;" text="Add Customer" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomerView" layoutX="11.0" layoutY="381.0" prefHeight="200.0" prefWidth="869.0" stylesheets="@../css/style.css">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="48.80002021789551" text="ID" />
+          <TableColumn fx:id="colTitle" prefWidth="52.000022888183594" text="Title" />
+            <TableColumn fx:id="colName" prefWidth="172.80001068115234" text="Name" />
+            <TableColumn fx:id="colDob" prefWidth="96.80001831054688" text="DOB" />
+            <TableColumn fx:id="colSalary" prefWidth="92.79998779296875" text="Salary" />
+            <TableColumn fx:id="colAddress" prefWidth="136.00009155273438" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="90.4000244140625" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="87.199951171875" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="92.800048828125" text="Postal Code" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="455.0" layoutY="291.0" onAction="#btnReloadOnAction" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #f1c40f;" text="Reload" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
