@@ -1,5 +1,6 @@
 package controller;
 
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -14,12 +15,15 @@ import model.tm.CustomerTM;
 import javax.swing.plaf.nimbus.State;
 import java.net.URL;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class CustomerFormController implements Initializable {
 
     public TableView tblCustomerView;
+    public JFXComboBox cbTitle;
     @FXML
     private TableColumn<?, ?> colAddress;
 
@@ -76,6 +80,15 @@ public class CustomerFormController implements Initializable {
 
     @FXML
     void btnAddCustomerOnAction(ActionEvent event) {
+        createCustomer();
+    }
+
+    private void createCustomer() {
+        Integer id = txtId.getText();
+        String title = cbTitle.getValue().toString();
+        String name = txtName.getText();
+        LocalDate dob = dateDob.getValue();
+        Double salary = Double.valueOf(txtSalary.getText());
 
     }
 
@@ -125,6 +138,11 @@ public class CustomerFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        cbTitle.setItems(
+                FXCollections.observableArrayList(
+                        Arrays.asList("MR", "MRS")
+                )
+        );
         loadCustomerData();
     }
 }

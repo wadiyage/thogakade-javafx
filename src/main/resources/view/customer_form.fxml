@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -20,7 +21,6 @@
       </Label>
       <JFXTextField fx:id="txtId" layoutX="23.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="id" unFocusColor="BLACK" />
       <DatePicker fx:id="dateDob" layoutX="669.0" layoutY="165.0" prefHeight="26.0" prefWidth="200.0" />
-      <JFXTextField fx:id="txtTitle" layoutX="239.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="title" unFocusColor="BLACK" />
       <JFXTextField fx:id="txtName" layoutX="455.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" promptText="name" unFocusColor="BLACK" />
       <JFXTextField fx:id="txtSalary" layoutX="23.0" layoutY="229.0" prefHeight="26.0" prefWidth="200.0" promptText="salary" unFocusColor="BLACK" />
       <JFXTextField fx:id="txtAddress" layoutX="239.0" layoutY="229.0" prefHeight="26.0" prefWidth="200.0" promptText="address" unFocusColor="BLACK" />
@@ -50,5 +50,6 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
+      <JFXComboBox fx:id="cbTitle" layoutX="239.0" layoutY="164.0" prefHeight="26.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
