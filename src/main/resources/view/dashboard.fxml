@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff39" height="400.0" stroke="BLACK" strokeType="INSIDE" width="189.0" />
+      <JFXButton layoutX="26.0" layoutY="186.0" onAction="#btnCustomerFormOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #2980b9;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="26.0" layoutY="229.0" onAction="#btnItemFormOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #2980b9;" text="Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="26.0" layoutY="273.0" onAction="#btnOrderFormOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #2980b9;" text="Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="dashRoot" layoutX="189.0" prefHeight="400.0" prefWidth="752.0" />
+      <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="40.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons/cart_18183982.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

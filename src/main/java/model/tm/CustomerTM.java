@@ -10,13 +10,13 @@ import java.time.LocalDate;
 @Getter
 @ToString
 public class CustomerTM {
-    private Integer id;
+    private String id;
     private String title;
     private String name;
-    private String address;
-    private Double salary;
     private LocalDate dob;
+    private Double salary;
+    private String address;
     private String city;
     private String province;
-    private String postalCode;
+    private Integer postalCode;
 }

@@ -99,7 +99,7 @@ public class CustomerFormController implements Initializable {
         Customer newCustomer = new Customer(id, title, name, address, salary, dob, city, province, postalCode);
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/samples", "root", "S@nDaRU#97");
+            Connection connection = DBConnection.getInstance().getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Customer VALUES(?,?,?,?,?,?,?,?,?)");
 
             preparedStatement.setString(1, String.valueOf(newCustomer.getId()));
@@ -145,23 +145,23 @@ public class CustomerFormController implements Initializable {
         colPostalCode.setCellValueFactory(new PropertyValueFactory<>("postalCode"));
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/samples", "root", "S@nDaRU#97");
+            Connection connection = DBConnection.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM Customer");
 
             ArrayList<CustomerTM> customerTMArrayList = new ArrayList<>();
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 customerTMArrayList.add(
                         new CustomerTM(
-                            resultSet.getInt(1),
+                            resultSet.getString(1),
                             resultSet.getString(2),
                             resultSet.getString(3),
-                            resultSet.getString(4),
+                            resultSet.getDate(4).toLocalDate(),
                             resultSet.getDouble(5),
-                            resultSet.getDate(6).toLocalDate(),
+                            resultSet.getString(6),
                             resultSet.getString(7),
                             resultSet.getString(8),
-                            resultSet.getString(9)
+                            resultSet.getInt(9)
                         )
                 );
                 tblCustomerView.setItems(FXCollections.observableArrayList(customerTMArrayList));
