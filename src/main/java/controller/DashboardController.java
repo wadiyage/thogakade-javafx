@@ -17,7 +17,7 @@ public class DashboardController {
     @FXML
     void btnCustomerFormOnAction(ActionEvent event) {
         try {
-            URL resource = this.getClass().getResource("view/customer_form.fxml");
+            URL resource = this.getClass().getResource("/view/customer_form.fxml");
 
             assert resource != null;
             Parent parent = FXMLLoader.load(resource);
@@ -32,7 +32,7 @@ public class DashboardController {
     @FXML
     void btnItemFormOnAction(ActionEvent event) {
         try {
-            URL resource = this.getClass().getResource("view/item_form.fxml");
+            URL resource = this.getClass().getResource("/view/item_form.fxml");
 
             assert resource != null;
             Parent parent = FXMLLoader.load(resource);

@@ -1,9 +1,10 @@
-package controller;
+package controller.item;
 
 import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -11,10 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.tm.ItemTM;
 
+import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class ItemFormController {
+public class ItemFormController implements Initializable {
 
     public TableView tblItemView;
     @FXML
@@ -88,4 +91,8 @@ public class ItemFormController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadItemData();
+    }
 }
